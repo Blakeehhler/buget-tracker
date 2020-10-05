@@ -26,8 +26,10 @@ mongoose.connect(
 );
 
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://bugettrackerdb:PkANEChpRB2I1LKE@cluster0.wmvvx.azure.mongodb.net/budget?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
+const uri = "mongodb+srv://bugettrackerdb:PkANEChpRB2I1LKE@cluster0.wmvvx.azure.mongodb.net/buget?retryWrites=true&w=majority";
+const client = new MongoClient(uri, {
+  useNewUrlParser: true
+});
 client.connect(err => {
   const collection = client.db("test").collection("devices");
   // perform actions on the collection object
